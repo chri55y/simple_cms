@@ -1,0 +1,24 @@
+commit -m
+"ch 7.1: generate Subject controller and view files (from PC, LF/CRLF warning)"
+
+    Terminal
+	$ rails generate controller Subjects index show new edit delete
+
+commit -m
+"ch 7.1: add non-display actions to SubjectsController class def"
+
+	in <plural name>_controller.rb, add method def's for
+	    >  create
+	    >  update
+	    >  destroy
+
+	>> should have all 8 CRUD actions defined when done
+
+commit -m
+"ch 7.3: update routes.rb to use resourceful routes, adding non-default delete"
+
+    resources :subjects do
+        member do
+            get :delete
+        end
+    end
