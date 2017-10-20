@@ -1,5 +1,8 @@
 class SubjectsController < ApplicationController
   def index
+    @subjects = Subject.all # controller talking to model
+    render json: @subjects
+
   end
 
   def show
