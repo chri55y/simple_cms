@@ -1,2 +1,5 @@
 Ctrl + c to exit (may have to follow up with a Y)
 
+Rails server sits on top of a Web server
+    =>  the first thing Rails server does is check to see
+        if a request can be handled within public folder
