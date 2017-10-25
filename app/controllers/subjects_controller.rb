@@ -4,7 +4,7 @@ class SubjectsController < ApplicationController
     # find all subjects so we can list them
     @subjects = Subject.sorted # generic form: Subject.all, but a sorted list is better
     # render('index') # this is done by default, so we don't need to include it
-    # kirk's preview used a different syntax for render
+    # kirk's preview used a different syntax for render, involving json
   end
 
   def show
@@ -12,6 +12,11 @@ class SubjectsController < ApplicationController
   end
 
   def new
+    # if we'd written our form differently in app/views/subjects/new.html.erb
+    # we would not need to instantiate anything here, but skoglund's (personal?)
+    # best practice is to include an object here,
+    # b/c doing so allows us to set default values for the obj's attributes
+    @subject = Subject.new
   end
 
   def create
