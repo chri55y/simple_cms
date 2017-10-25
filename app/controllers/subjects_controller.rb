@@ -16,7 +16,7 @@ class SubjectsController < ApplicationController
     # we would not need to instantiate anything here, but skoglund's (personal?)
     # best practice is to include an object here,
     # b/c doing so allows us to set default values for the obj's attributes
-    @subject = Subject.new
+    @subject = Subject.new({:name => 'Default Name'})
   end
 
   def create
