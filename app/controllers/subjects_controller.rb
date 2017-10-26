@@ -20,6 +20,16 @@ class SubjectsController < ApplicationController
   end
 
   def create
+    # instantiate with form parameters
+    @subject = Subject.new(params[:subject])
+    # save
+    if @subjects.save
+    # save success > redirect
+      redirect_to(subjects_path)
+    else
+    # save fail > re-display form
+      render('new')
+    end
   end
 
   def edit
