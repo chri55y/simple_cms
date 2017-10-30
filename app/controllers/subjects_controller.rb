@@ -21,7 +21,7 @@ class SubjectsController < ApplicationController
 
   def create
     # instantiate with form parameters
-    @subject = Subject.new(params[:subject])
+    @subject = Subject.new(params.require(:subject).permit(:name, :position, :visible))
     # save
     if @subjects.save
     # save success > redirect
