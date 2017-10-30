@@ -38,8 +38,8 @@ class SubjectsController < ApplicationController
   end
 
   def update
-    # instantiate with form parameters
-    @subject = Subject.new(subject_params)
+    # find objects
+    @subject = Subject.find(params[:id])
     # save
     if @subject.save
       # save success > redirect
