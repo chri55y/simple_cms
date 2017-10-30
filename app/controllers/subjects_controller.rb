@@ -21,9 +21,9 @@ class SubjectsController < ApplicationController
 
   def create
     # instantiate with form parameters
-    @subject = Subject.new(params.require(:subject).permit(:name, :position, :visible))
+    @subject = Subject.new(subject_params)
     # save
-    if @subjects.save
+    if @subject.save
     # save success > redirect
       redirect_to(subjects_path)
     else
@@ -42,6 +42,13 @@ class SubjectsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  # moved this from create method so it can be used in update
+  def subject_params
+    params.require(:subject).permit(:name, :position, :visible)
   end
 
 end
