@@ -38,6 +38,16 @@ class SubjectsController < ApplicationController
   end
 
   def update
+    # instantiate with form parameters
+    @subject = Subject.new(subject_params)
+    # save
+    if @subject.save
+      # save success > redirect
+      redirect_to(subjects_path)
+    else
+      # save fail > re-display form
+      render('new')
+    end
   end
 
   def delete
