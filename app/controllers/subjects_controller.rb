@@ -43,7 +43,7 @@ class SubjectsController < ApplicationController
     # update via update_attributes
     if @subject.update_attributes(subject_params)
       # update success > redirect to show
-      redirect_to(subjects_path(@subject))
+      redirect_to(subject_path(@subject))
     else
       # update fail > re-display form
       render('edit')
