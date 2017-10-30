@@ -40,13 +40,13 @@ class SubjectsController < ApplicationController
   def update
     # find objects
     @subject = Subject.find(params[:id])
-    # save
-    if @subject.save
-      # save success > redirect
-      redirect_to(subjects_path)
+    # update via update_attributes
+    if @subject.update_attributes(subject_params)
+      # update success > redirect to show
+      redirect_to(subjects_path(@subject))
     else
-      # save fail > re-display form
-      render('new')
+      # update fail > re-display form
+      render('edit')
     end
   end
 
