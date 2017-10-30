@@ -33,6 +33,8 @@ class SubjectsController < ApplicationController
   end
 
   def edit
+    # find record (same as show method)
+    @subject = Subject.find(params[:id])
   end
 
   def update
