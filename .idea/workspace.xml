@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ed78306a-bcd6-416b-aab9-582244215ef8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/subjects_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/subjects_controller.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -24,8 +25,8 @@
       <file leaf-file-name="subjects_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/subjects_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -97,8 +98,8 @@
         <option value="$PROJECT_DIR$/app/views/subjects/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/subjects/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/subjects/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/subjects_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/subjects/delete.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/subjects_controller.rb" />
       </list>
     </option>
   </component>
@@ -342,12 +343,12 @@
       <workItem from="1508623502503" duration="8379000" />
       <workItem from="1508878564206" duration="3204000" />
       <workItem from="1508948659876" duration="8142000" />
-      <workItem from="1509299366651" duration="11522000" />
+      <workItem from="1509299366651" duration="11630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89292000" />
+    <option name="totallyTimeSpent" value="89400000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -774,8 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/subjects_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
           <folding />
         </state>
       </provider>

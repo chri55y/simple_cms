@@ -58,6 +58,7 @@ class SubjectsController < ApplicationController
   def destroy
     # find record
     @subject = Subject.find(params[:id])
+    @subject.destroy
   end
 
   private
