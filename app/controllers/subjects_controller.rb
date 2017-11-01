@@ -25,6 +25,7 @@ class SubjectsController < ApplicationController
     # save
     if @subject.save
     # save success > redirect
+      flash[:notice] = "Subject created successfully."
       redirect_to(subjects_path)
     else
     # save fail > re-display form
