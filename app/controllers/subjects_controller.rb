@@ -44,6 +44,7 @@ class SubjectsController < ApplicationController
     # update via update_attributes
     if @subject.update_attributes(subject_params)
       # update success > redirect to show
+      flash[:notice] = "Subject updated successfully."
       redirect_to(subject_path(@subject))
     else
       # update fail > re-display form
