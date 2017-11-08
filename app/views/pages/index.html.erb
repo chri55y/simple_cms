@@ -14,15 +14,15 @@
       <th>#(position)</th>
       <th>Page</th>
       <th>Visible</th>
-      <th>Pages</th>
+      <th>Sections</th>
       <th>Actions</th>
     </tr>
-    <% @subjects.each do |subject| %>
+    <% @pages.each do |page| %>
         <tr>
-          <td><%= subject.position %></td>
-          <td><%= subject.name %></td>
-          <td class="center"><%= subject.visible ? 'Yes' : 'No' %></td>
-          <td class="center"><%= subject.pages.size %></td>
+          <td><%= page.position %></td>
+          <td><%= page.name %></td>
+          <td class="center"><%= page.visible ? 'Yes' : 'No' %></td>
+          <td class="center"><%= page.sections.size %></td>
           <td class="actions">
             <%= link_to("Show", "#", :class => 'action show') %>
             <%= link_to("Edit", "#", :class => 'action edit') %>
