@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
   def create  #added
     # instantiate
-    @page = Page.new(params[:page])
+    @page = Page.new(page_strong_params)  #(params[:page])
     # save
     if @page.save
       # success
@@ -36,4 +36,10 @@ class PagesController < ApplicationController
   def destroy #added
   end
 
+
+  private
+
+  def page_strong_params
+    params.require(:page).permit(:name, :position, :visible, :permalink, :subject_id)
+  end
 end
