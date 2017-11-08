@@ -12,6 +12,16 @@ class PagesController < ApplicationController
   end
 
   def create  #added
+    # instantiate
+    @page = Page.new(params[:page])
+    # save
+    if @page.save
+      # success
+      redirect_to(pages_path)
+    else
+      # failure
+      render('new')
+    end
   end
 
   def edit
