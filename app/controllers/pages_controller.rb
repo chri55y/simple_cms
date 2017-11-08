@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   end
 
   def new
-    @page = Page.new
+    @page = Page.new({:position => 1+(Page.position_sorted.last.position)})
   end
 
   def create  #added
