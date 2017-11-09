@@ -17,6 +17,7 @@ class PagesController < ApplicationController
     # save
     if @page.save
       # success
+      flash[:notice] = "Page '#{@page.name}' created successfully."
       redirect_to(pages_path)
     else
       # failure
