@@ -26,6 +26,13 @@ class SectionsController < ApplicationController
   end
 
   def update
+    @section = Section.find(params[:id])
+    if @section.update_attributes(section_strong_params)
+      flash[:notice] = "Successfully updated Section"
+      redirect_to(section_path(params[:id]))
+    else
+      render('edit')
+    end
   end
 
   def delete
