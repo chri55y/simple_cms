@@ -1,26 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'sections/index'
+  # add non-default delete
+  resources :sections do
+    member do
+      get :delete
+    end
+  end
 
-  get 'sections/show'
-
-  get 'sections/new'
-
-  get 'sections/edit'
-
-  get 'sections/delete'
-
-  # get 'pages/index'
-  #
-  # get 'pages/show'
-  #
-  # get 'pages/new'
-  #
-  # get 'pages/edit'
-  #
-  # get 'pages/delete'
-
-  # eliminate above so we can use resourceful routes
 
   # add non-default delete
   resources :pages do
