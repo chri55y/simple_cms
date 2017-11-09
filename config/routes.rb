@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   get 'demo/hello'
   get 'demo/other_hello'
   get 'demo/lynda'
+  # ch 9.7
+  get 'demo/escape_output'
 
   
   # default route: may go away in future rails versions
