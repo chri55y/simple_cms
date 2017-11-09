@@ -1,4 +1,4 @@
-
+<% @page_title = "Sections Index" %>
 <div class="sections index">
   <h2>Sections</h2>
 
@@ -16,7 +16,7 @@
         <tr>
           <td><%= sctn.position %></td>
           <td><%= sctn.name %></td>
-          <td class="center"><%= sctn.visible ? 'Yes' : 'No' %></td>
+          <td class="center"><%= status_tag(sctn.visible) %></td>
 
           <td class="actions">
             <%= link_to("Show", section_path(sctn) , :class => 'action show') %>
