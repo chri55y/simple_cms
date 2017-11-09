@@ -1,5 +1,7 @@
 class SubjectsController < ApplicationController
 
+  layout 'admin'
+
   def index
     # find all subjects so we can list them
     @subjects = Subject.sorted # generic form: Subject.all, but a sorted list is better
