@@ -44,6 +44,7 @@ class PagesController < ApplicationController
   end
 
   def delete
+    @page = Page.find(parame[:id])
   end
 
   def destroy #added
