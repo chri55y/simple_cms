@@ -48,6 +48,13 @@ class PagesController < ApplicationController
   end
 
   def destroy #added
+    # find
+    @page = Page.find(params[:id])
+    # destroy
+    @page.destroy
+    # redirect
+    flash[:notice] = "Page '#{@page.name}' successfully destroyed"
+    redirect_to(pages_path)
   end
 
 
