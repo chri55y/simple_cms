@@ -1,5 +1,25 @@
 Rails.application.routes.draw do
 
+  # get 'pages/index'
+  #
+  # get 'pages/show'
+  #
+  # get 'pages/new'
+  #
+  # get 'pages/edit'
+  #
+  # get 'pages/delete'
+
+  # eliminate above so we can use resourceful routes
+
+  # add non-default delete
+  resources :pages do
+    member do
+      get :delete
+    end
+  end
+
+
   root 'demo#index'
 
   resources :subjects do
