@@ -1,6 +1,6 @@
 class DemoController < ApplicationController
 	
-	layout false	# fix later once we know more about layouts
+	layout 'application'  # 'application' layout is default, so this explicity is not necessary
 	
 	def index
     render ('index')    # default, what would be done if nothing was defined here
