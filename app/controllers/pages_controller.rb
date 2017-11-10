@@ -13,6 +13,7 @@ class PagesController < ApplicationController
   def new
     @page = Page.new({:position => 1+(Page.position_sorted.last.position)})
     @page_count = Page.count + 1
+    @subjects = Subject.sorted
   end
 
   def create  #added
@@ -26,6 +27,7 @@ class PagesController < ApplicationController
     else
       # failure
       @page_count = Page.count + 1
+      @subjects = Subject.sorted
       render('new')
     end
   end
@@ -33,6 +35,7 @@ class PagesController < ApplicationController
   def edit
     @page = Page.find(params[:id])
     @page_count = Page.count
+    @subjects = Subject.sorted
   end
 
   def update  #added
@@ -46,6 +49,7 @@ class PagesController < ApplicationController
     else
       # failure
       @page_count = Page.count
+      @subjects = Subject.sorted
       render('edit')
     end
   end
