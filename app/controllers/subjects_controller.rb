@@ -19,6 +19,7 @@ class SubjectsController < ApplicationController
     # best practice is to include an object here,
     # b/c doing so allows us to set default values for the obj's attributes
     @subject = Subject.new({:name => 'Default Name'})
+    @subject_count = Subject.count + 1
   end
 
   def create
@@ -31,6 +32,7 @@ class SubjectsController < ApplicationController
       redirect_to(subjects_path)
     else
     # save fail > re-display form
+      @subject_count = Subject.count
       render('new')
     end
   end
@@ -38,6 +40,7 @@ class SubjectsController < ApplicationController
   def edit
     # find record (same as show method)
     @subject = Subject.find(params[:id])
+    @subject_count = Subject.count
   end
 
   def update
@@ -50,6 +53,7 @@ class SubjectsController < ApplicationController
       redirect_to(subject_path(@subject))
     else
       # update fail > re-display form
+      @subject_count = Subject.count  # used in edit template
       render('edit')
     end
   end

@@ -12,6 +12,7 @@ class PagesController < ApplicationController
 
   def new
     @page = Page.new({:position => 1+(Page.position_sorted.last.position)})
+    @page_count = Page.count + 1
   end
 
   def create  #added
@@ -24,12 +25,14 @@ class PagesController < ApplicationController
       redirect_to(pages_path)
     else
       # failure
+      @page_count = Page.count + 1
       render('new')
     end
   end
 
   def edit
     @page = Page.find(params[:id])
+    @page_count = Page.count
   end
 
   def update  #added
@@ -42,6 +45,7 @@ class PagesController < ApplicationController
       redirect_to(page_path(params[:id]))
     else
       # failure
+      @page_count = Page.count
       render('edit')
     end
   end
