@@ -74,7 +74,8 @@ class SubjectsController < ApplicationController
 
   # moved this from create method so it can be used in update
   def subject_params
-    params.require(:subject).permit(:name, :position, :visible)
+    # params.require(:subject).permit(:name, :position, :visible) #without created_at
+    params.require(:subject).permit(:name, :position, :visible, :created_at) #with created_at
   end
 
 end
