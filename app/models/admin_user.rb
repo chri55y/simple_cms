@@ -36,6 +36,7 @@ class AdminUser < ApplicationRecord
   FORBIDDEN_USERNAMES = ['marymary','littlebopeep','humpty_dumpty']
 
   validate :username_is_allowed
+  validate :no_new_users_on_day, :on => :create
 
   private
 
@@ -45,5 +46,13 @@ class AdminUser < ApplicationRecord
     end
   end
 
+  def no_new_users_on_day
+    day = Time.now.wday
+    if Time.now.wday == day
+      errors.add(:base, "No new users today")
+                # error messages off :base do not get
+                # concatenated with attribute name
+    end
+  end
 
 end
