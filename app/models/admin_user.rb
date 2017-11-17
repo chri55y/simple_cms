@@ -35,7 +35,7 @@ class AdminUser < ApplicationRecord
   # custom validations (12.4)
   FORBIDDEN_USERNAMES = ['marymary','littlebopeep','humpty_dumpty']
 
-  validates :username_is_allowed
+  validate :username_is_allowed
 
   private
 
