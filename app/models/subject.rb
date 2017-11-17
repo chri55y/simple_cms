@@ -12,4 +12,7 @@ class Subject < ApplicationRecord
   # from ch 11.4
   validates_presence_of :name
 
+  # further validations added in ch 12.2
+  validates_length_of :name, :maximum => 255 # DB requirement
+
 end
