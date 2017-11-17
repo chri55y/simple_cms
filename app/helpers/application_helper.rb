@@ -2,7 +2,7 @@ module ApplicationHelper
 
   # added in ch 11.4
   def error_messages_for(object)
-    render(:partial => 'application/error_messages', :locals => {:object})
+    render(:partial => 'application/error_messages', :locals => {:object => object})
   end
 
   def status_tag(boolean, options={})
