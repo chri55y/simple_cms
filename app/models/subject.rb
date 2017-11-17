@@ -8,5 +8,8 @@ class Subject < ApplicationRecord
   scope :newest_first, lambda { order("created_at DESC") }
   scope :search, lambda { |query| where(["name LIKE ?", "%#{query}%"]) }
 
+  # simple validation, to trigger form error handling
+  # from ch 11.4
+  validates_presence_of :name
 
 end
