@@ -20,7 +20,7 @@ class AdminUser < ApplicationRecord
   # validates_format_of :email, :with => EMAIL_REGEX
   # validates_confirmation_of :email
 
-  # "sexy" validations
+  # "sexy" validations (12.3)
   validates :first_name,  :presence => true,
                           :length => { :maximum => 25}
   validates :last_name, :presence => true,
@@ -31,5 +31,19 @@ class AdminUser < ApplicationRecord
                     :length => {:maximum => 100},
                     :format => EMAIL_REGEX,
                     :confirmation => true
+
+  # custom validations (12.4)
+  FORBIDDEN_USERNAMES = ['marymary','littlebopeep','humpty_dumpty']
+
+  validates :username_is_allowed
+
+  private
+
+  def username_is_allowed
+    if FORBIDDEN_USERNAMES.include?(username)
+      errors.add(:username, "is not allowed")
+    end
+  end
+
 
 end
